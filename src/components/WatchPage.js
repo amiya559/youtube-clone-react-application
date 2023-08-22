@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
-import Comments from "./Comments";
+import CommentsContainer from "./CommentsContainer";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
-  console.log(searchParams);
+  //console.log(searchParams);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -26,7 +26,7 @@ const WatchPage = () => {
           allowFullScreen
         ></iframe>
       </div>
-      <Comments />
+      <CommentsContainer />
     </div>
   );
 };

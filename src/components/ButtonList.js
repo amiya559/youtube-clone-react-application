@@ -17,21 +17,6 @@ const buttonLists = [
   "Spring",
   "Movies",
   "Sports",
-  "All",
-  "Java",
-  "Spring",
-  "Movies",
-  "Sports",
-  "All",
-  "Java",
-  "Spring",
-  "Movies",
-  "Sports",
-  "All",
-  "Java",
-  "Spring",
-  "Movies",
-  "Sports",
 ];
 
 const ButtonList = () => {

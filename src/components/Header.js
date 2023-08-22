@@ -7,6 +7,7 @@ import {
 } from "../utils/constants";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
+import { Link } from "react-router-dom";
 //import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -22,7 +23,7 @@ const Header = () => {
   }, [searchQuery]);
 
   const getSearchSuggestions = async () => {
-    console.log("API Call : " + searchQuery);
+    //console.log("API Call : " + searchQuery);
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await data.json();
     setSuggestions(json[1]);
@@ -43,7 +44,9 @@ const Header = () => {
           alt="menu"
           src={MENU_ICON}
         />
-        <img className="h-14" alt="youtube-logo" src={YOUTUBE_LOGO} />
+        <Link to={"/"}>
+          <img className="h-14" alt="youtube-logo" src={YOUTUBE_LOGO} />
+        </Link>
       </div>
       <div className="col-span-10 px-10">
         <div>
